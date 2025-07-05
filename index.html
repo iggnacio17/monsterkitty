@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monster High Aleatorio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎴 Monster High Aleatorio</h1>
+    <div class="header-buttons">
+      <button onclick="toggleTheme()">🌓</button>
+      <a href="collection.html">📚 Colección</a>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div class="card-box" id="character-box">
+      <img id="character-image" src="" alt="Imagen del personaje" />
+      <h2 id="character-name">Haz clic para descubrir</h2>
+      <div id="character-stats" class="stats-container"></div>
+      <button onclick="getRandomCharacter()">✨ Obtener Personaje</button>
+      <button onclick="toggleFavorite()" id="favorite-btn" disabled>🤍 Marcar como Favorito</button>
+    </div>
+  </main>
+
+  <script src="characters.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

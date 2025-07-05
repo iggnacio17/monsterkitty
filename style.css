@@ -1,0 +1,209 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #111;
+  --card: white;
+  --highlight: #d63031; /* rojo Monster High */
+  --stat-popularidad: #e17055;
+  --stat-estilo: #d63031;
+  --stat-valentia: #0984e3;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #fff;
+  --card: #1e1e1e;
+  --highlight: #d63031;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+header {
+  padding: 1rem;
+  background: var(--card);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--highlight);
+  font-weight: bold;
+}
+
+.main-container {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-box {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.card-box img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: var(--highlight);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0.5rem auto;
+  display: block;
+  width: 90%;
+  max-width: 300px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.danger {
+  background-color: #d32f2f;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 960px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  margin-top: 10px;
+}
+
+.card-name {
+  font-weight: bold;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.card-stats {
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+  color: var(--text);
+  text-align: left;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+/* Stats container */
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.stat {
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  min-width: 80px;
+  text-align: center;
+  color: white;
+}
+
+.stat-popularidad { background-color: var(--stat-popularidad); }
+.stat-estilo { background-color: var(--stat-estilo); }
+.stat-valentia { background-color: var(--stat-valentia); }
+
+.favorite-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--highlight);
+  margin-bottom: 0.5rem;
+}
+
+/* Responsivo */
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-buttons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    padding: 0 1rem;
+  }
+
+  .card-box {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .card img {
+    height: 120px;
+    margin-top: 5px;
+  }
+}
