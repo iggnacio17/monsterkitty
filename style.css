@@ -1,19 +1,21 @@
 :root {
-  --bg: #f9f9f9;
-  --text: #111;
-  --card: white;
-  --highlight: #d63031; /* rojo Monster High */
-  --stat-popularidad: #e17055;
-  --stat-estilo: #d63031;
-  --stat-valentia: #0984e3;
+  --bg: #fce4ec; /* rosa muy claro */
+  --text: #880e4f; /* rosa oscuro para texto */
+  --card: #fff0f6; /* blanco con un toque rosado (como Draculaura) */
+  --highlight: #e91e63; /* rosa fuerte típico de Draculaura */
+  --stat-popularidad: #ec407a;
+  --stat-estilo: #d81b60;
+  --stat-valentia: #ce93d8;
 }
 
 body.dark {
-  --bg: #121212;
-  --text: #fff;
-  --card: #1e1e1e;
-  --highlight: #d63031;
+  --bg: #2a0332;
+  --text: #f8bbd0;
+  --card: #4a148c;
+  --highlight: #e91e63;
 }
+
+/* El resto queda igual, por ejemplo: */
 
 * {
   box-sizing: border-box;
@@ -159,7 +161,7 @@ button.danger {
   font-size: 0.8rem;
   min-width: 80px;
   text-align: center;
-  color: white;
+  color: #880e4f; /* color oscuro rosa */
 }
 
 .stat-popularidad { background-color: var(--stat-popularidad); }
